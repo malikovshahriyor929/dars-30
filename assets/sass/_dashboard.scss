@@ -1,0 +1,256 @@
+@use "./verable" as *;
+
+.dashboard {
+  // width: 244px;
+  background-color: $black;
+  height: 100%;
+  &_items {
+    padding: 24px 24px 0 24px;
+  }
+}
+.dashboard_hover {
+  border-radius: 4px;
+  width: 6px;
+  height: 36px;
+  background: #fff;
+  opacity: 0;
+  transition: 0.4s;
+}
+.dashboard_hover2 {
+  opacity: 1;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: $primary;
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #fff;
+  }
+}
+.dashboard_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  transition: 0.4s;
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  &:hover {
+    .dashboard_hover {
+      opacity: 1;
+    }
+    background-color: $primary;
+  }
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 4px 8px 0px 8px;
+}
+.dashboard_top_items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hr {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 90%;
+  margin: 0 auto;
+  height: 0px;
+}
+.report {      
+  padding: 0 0 0 15px;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+.dashboard_menu2{
+  display: none;
+
+} 
+.logo_phone{
+display: none;
+}
+@media (max-width: 1280px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: $primary;
+    border-radius: 4px;
+    height: 38px;
+    width: 100%;
+    p {
+      font-size: clamp(10px, 1.4vw, 16px);
+    }
+  }
+  .dashboard_menu {
+    gap: 5px;
+    height: 40px;
+    p {
+      font-size: clamp(10px, 1.4vw, 14px);
+    }
+    &:hover {
+      .dashboard_hover {
+        opacity: 1;
+      }
+      background-color: $primary;
+    }
+  }
+}
+@media (max-width: 1230px) {
+  .dashboard {
+    &_items {
+      padding: 14px 14px 0 14px;
+    }
+  }
+  .dashboard_hover {
+    width: 6px;
+    height: 28px;
+  }
+}
+@media (max-width: 1155px) {
+  .dashboard {
+    &_items {
+      padding: 10px 10px 0 10px;
+    }
+  }
+  .dashboard_hover {
+    width: 6px;
+    height: 28px;
+  }
+}
+@media (max-width: 1063px) {
+  .dashboard {
+    &_items {
+      padding: 10px 10px 0 10px;
+    }
+  }
+  .dashboard_hover {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: $primary;
+    border-radius: 4px;
+    height: 38px;
+    justify-content: center;
+    width: 70%;
+    p {
+      display: none;
+    }
+  }
+  .dashboard_menu {
+    justify-content: center;
+    width: 70%;
+
+    p {
+      display: none;
+    }
+  }
+  .logopc {
+    display: none;
+  }
+  .hr {
+    display: none;
+  }
+
+  .report {
+    display: none;
+  }
+  .dashboard {
+    width: 70px;
+    background-color: $black;
+    height: 100%;
+    &_items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 10px 0 10px;
+    }
+  }
+  .logo {
+    padding: 4px 4px 0px 0px;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 0fr 1.5fr 3.6fr;
+  }
+}
+@media (max-width: 961px) {
+  .dashboard_top_items {
+    position: fixed;
+    width: 100vw;
+    left: 0px;
+    bottom: -1px;
+    display: flex;
+    flex-direction: row;
+    background-color: $black;
+    padding: 10px;
+  }
+  .menu2 {
+    display: none;
+  }
+  .dashboard_menu2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 0 1.5fr 3.6fr;
+  }
+  .logo {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: $primary;
+    border-radius: 4px;
+    height: 38px;
+    justify-content: center;
+    width: 30%;
+    p {
+      display: none;
+    }
+  }
+  .dashboard_menu {
+    justify-content: center;
+    width: 30%;
+
+    p {
+      display: none;
+    } 
+  }
+}
+@media (max-width: 868px) {
+  .dashboard {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,261 @@
+@use "./verable" as *;
+
+.statistic {
+  padding: 18px 28px;
+  background-color: $gray-04;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  // width: 344px;
+}
+.statistic_title {
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $gray-02;
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    color: $gray-03;
+  }
+}
+.users {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 24px;
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: $gray-05;
+    padding-top: 8px;
+  }
+}
+.income {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.33333;
+    color: $gray-05;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33333;
+    text-align: right;
+    color: $gray-05;
+    border-radius: 2px;
+    padding: 4px 8px;
+    width: 52px;
+    height: 24px;
+    background: #f4f5f7;
+  }
+}
+.income_value {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: $gray-02;
+  }
+}
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.01em;
+    color: $secondary;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.42857;
+    color: $black;
+  }
+  h5 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.01em;
+    color: $green;
+  }
+}
+.chart {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 24px;
+  &_img {
+    display: flex;
+    justify-content: center;
+  }
+}
+.chart_txt {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $black;
+    span {
+      color: $green;
+    }
+  }
+}
+.chart_gap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.blue {
+  height: 16px;
+  width: 16px;
+  background-color: $primary;
+  border-radius: 50%;
+}
+.green {
+  height: 16px;
+  width: 16px;
+  background-color: $green;
+  border-radius: 50%;
+}
+.red {
+  height: 16px;
+  width: 16px;
+  background-color: $secondary;
+  border-radius: 50%;
+}
+.gray {
+  height: 16px;
+  width: 16px;
+  background-color: $gray-05;
+  border-radius: 50%;
+}
+.red2 {
+  color: $secondary;
+}
+@media (max-width: 1264px) {
+  .statistic {
+    padding: 11px 15px;
+    background-color: $gray-04;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // width: 344px;
+  }
+  .middle {
+    p {
+      font-size: clamp(8px, 1.4vw, 16px);
+    }
+    h1 {
+      font-weight: 700;
+      font-size: clamp(13px, 2vw, 26px);
+      line-height: 1.42857;
+      color: $black;
+    }
+    h5 {
+      font-weight: 500;
+      font-size: clamp(8px, 1.4vw, 16px);
+      line-height: 1.75;
+      letter-spacing: -0.01em;
+      color: $green;
+    }
+  }
+  .income {
+    padding-bottom: 14px;
+    h3 {
+      font-size: clamp(8px, 1.2vw, 18px);
+    }
+    p {
+      font-size: clamp(7px, 1.4vw, 12px);
+      padding: 4px 4px;
+      text-align: center;
+      width: 42px;
+      height: 20px;
+      background: #f4f5f7;
+    }
+  }
+  .income_value {
+    p {
+      font-size: clamp(7px, 1.4vw, 14px);
+    }
+  }
+  .users {
+    padding: 14px;
+    p {
+      font-size: clamp(7px, 1.4vw, 14px);
+      padding-top: 6px;
+    }
+  }
+}
+@media (max-width: 1086px) {
+  .chart {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 14px;
+    &_img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .chart_txt {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6px;
+    p {
+      font-weight: 400;
+      font-size: clamp(8px, 1.4vw, 16px);
+      line-height: 1.5;
+      color: $black;
+      span {
+        color: $green;
+      }
+    }
+  }
+  .chart_gap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (max-width: 868px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .statistic {
+    padding: 18px 28px;
+    background-color: $gray-04;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100vw;
+    // width: 344px;
+    margin-bottom: 50px;
+  }
+  .statistic_title {
+    display: none;
+  }
+
+  .users_info {
+    width: 750px;
+  }
+}
